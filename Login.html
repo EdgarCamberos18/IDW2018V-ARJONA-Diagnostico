@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <title>LOGIN</title>
     <script>
-        function validar(String usuario,String password) {
-                alert("pagina Fregoso");
+        function redirect(usuario,password){
+            if(password==usuario)
+                location.href="Vista.html";
+            else
+                alert("usuario y/o contraseña incorrectos");
         }
     </script>
 </head>
 <body>
     <form>
         <input type="text" id="usuario" name="usuario">
+        <br>
         <input type="text" id="password" name="password">
-        <button type="submit" onclick="validar(usuario,password)">Ingresar</button>
+        <br>
+        <button type="submit" onclick="redirect(usuario,password)">Ingresar</button>
     </form>
 </body>
 </html>
