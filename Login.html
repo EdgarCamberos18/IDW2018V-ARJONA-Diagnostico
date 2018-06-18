@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <title>LOGIN</title>
     <script>
-        function redirect(usuario,password){
-            if(password==usuario)
-                location.href="Vista.html";
+        function redirect(){
+            if (document.form.password.value=='admin' && document.form.login.value=='admin'){
+                document.form.submit();
+            }
             else
                 alert("usuario y/o contraseña incorrectos");
         }
     </script>
 </head>
 <body>
-    <form>
+    <form  name=form action="Vista.html">
         <input type="text" id="usuario" name="usuario">
         <br>
-        <input type="text" id="password" name="password">
+        <input type="password" id="password" name="password">
         <br>
         <button type="submit" onclick="redirect(usuario,password)">Ingresar</button>
     </form>
 </body>
 </html>
+
+
+
